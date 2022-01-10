@@ -2,6 +2,8 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:jumping_bottom_nav_bar/jumping_bottom_nav_bar.dart';
+import 'package:flutter_vector_icons/flutter_vector_icons.dart';
 import 'package:game_savy_app/constants.dart';
 
 class StartPage extends StatefulWidget {
@@ -16,6 +18,7 @@ class _StartPageState extends State<StartPage> {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
+      extendBody: true,
       // backgroundColor: bgColor,
       // appBar: appBar(),
       body: Container(
@@ -61,12 +64,16 @@ class _StartPageState extends State<StartPage> {
                         },
                         itemCount: jsonData.length),
                   ),
+                  SizedBox(
+                    height: size.height * 0.02,
+                  ),
                 ],
               ),
             ),
           ],
         ),
       ),
+      bottomNavigationBar: bottomNav(),
     );
   }
 
@@ -343,6 +350,50 @@ class _StartPageState extends State<StartPage> {
           ),
         ],
       ),
+    );
+  }
+
+  JumpingTabBar bottomNav() {
+    return JumpingTabBar(
+      backgroundColor: bgColor,
+      circleGradient: LinearGradient(
+        colors: [violetColor, bgColorBottom],
+        stops: const [0.5, 0.8],
+        begin: Alignment.topCenter,
+        end: Alignment.bottomCenter,
+      ),
+      items: [
+        TabItemIcon(
+          iconData: FontAwesome.gamepad,
+          curveColor: Colors.cyan,
+          startColor: Colors.white,
+          endColor: Colors.white,
+        ),
+        TabItemIcon(
+          iconData: Entypo.rocket,
+          curveColor: Colors.amber,
+          startColor: Colors.white,
+          endColor: Colors.white,
+        ),
+        TabItemIcon(
+          iconData: Feather.shopping_bag,
+          curveColor: Colors.indigo[200],
+          startColor: Colors.white,
+          endColor: Colors.white,
+        ),
+        TabItemIcon(
+          iconData: Feather.heart,
+          curveColor: Colors.tealAccent,
+          startColor: Colors.white,
+          endColor: Colors.white,
+        ),
+        TabItemIcon(
+          iconData: Octicons.comment_discussion,
+          curveColor: Colors.yellowAccent,
+          startColor: Colors.white,
+          endColor: Colors.white,
+        ),
+      ],
     );
   }
 }
