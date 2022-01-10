@@ -6,6 +6,7 @@ import 'package:game_savy_app/browse_games.dart';
 import 'package:game_savy_app/liked_games.dart';
 import 'package:game_savy_app/messages.dart';
 import 'package:game_savy_app/search_games.dart';
+import 'package:game_savy_app/shop_games.dart';
 import 'package:jumping_bottom_nav_bar/jumping_bottom_nav_bar.dart';
 import 'package:flutter_vector_icons/flutter_vector_icons.dart';
 import 'package:game_savy_app/constants.dart';
@@ -45,7 +46,7 @@ class _StartPageState extends State<StartPage> {
             children: [
               BrowseGames(),
               SearchGames(),
-              BrowseGames(),
+              ShopGames(),
               LikedGames(),
               Messages(),
             ],
