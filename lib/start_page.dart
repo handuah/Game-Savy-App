@@ -3,6 +3,8 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:game_savy_app/browse_games.dart';
+import 'package:game_savy_app/liked_games.dart';
+import 'package:game_savy_app/messages.dart';
 import 'package:game_savy_app/search_games.dart';
 import 'package:jumping_bottom_nav_bar/jumping_bottom_nav_bar.dart';
 import 'package:flutter_vector_icons/flutter_vector_icons.dart';
@@ -44,8 +46,8 @@ class _StartPageState extends State<StartPage> {
               BrowseGames(),
               SearchGames(),
               BrowseGames(),
-              BrowseGames(),
-              BrowseGames(),
+              LikedGames(),
+              Messages(),
             ],
           ),
         ),
