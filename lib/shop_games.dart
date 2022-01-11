@@ -94,6 +94,7 @@ class _ShopGamesState extends State<ShopGames> {
       width: size.width,
       // color: Colors.green,
       child: GridView.builder(
+          padding: EdgeInsets.symmetric(vertical: size.height * 0.01),
           itemCount: gamesSearchData.length,
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 2,
