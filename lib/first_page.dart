@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:game_savy_app/constants.dart';
 import 'package:game_savy_app/start_page.dart';
+import 'package:hexcolor/hexcolor.dart';
 
 class FirstPage extends StatefulWidget {
   const FirstPage({Key? key}) : super(key: key);
@@ -53,21 +54,32 @@ class _FirstPageState extends State<FirstPage> {
     return SizedBox(
       width: size.width * 0.8,
       height: size.height * 0.08,
-      child: ElevatedButton(
-        onPressed: () {
-          Navigator.push(context,
-              MaterialPageRoute(builder: (context) => const StartPage()));
-        },
-        child: Text(
-          'Start Now',
-          style: bodyText.copyWith(fontSize: 16.0),
-        ),
-        style: ElevatedButton.styleFrom(
-          padding: EdgeInsets.symmetric(horizontal: size.width * 0.04),
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(20.0),
+      child: DecoratedBox(
+        decoration: BoxDecoration(
+          gradient: RadialGradient(
+            colors: [lightBgColor, HexColor('#015FBF')],
+            radius: 2.5,
+            center: Alignment.topCenter,
+            stops: const [0.3, 0.8],
           ),
-          primary: lightBtnColor,
+          borderRadius: BorderRadius.circular(20.0),
+        ),
+        child: ElevatedButton(
+          onPressed: () {
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => const StartPage()));
+          },
+          child: Text(
+            'Start Now',
+            style: bodyText.copyWith(fontSize: 16.0),
+          ),
+          style: ElevatedButton.styleFrom(
+            padding: EdgeInsets.symmetric(horizontal: size.width * 0.04),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(20.0),
+            ),
+            primary: Colors.transparent,
+          ),
         ),
       ),
     );
