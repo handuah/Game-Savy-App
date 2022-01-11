@@ -109,4 +109,10 @@ List gamesSearchData = [
     'logo_url':
         'https://preview.redd.it/xgf0kp6bqo251.png?auto=webp&s=e98d18f9f58cfa54fb990151a8e0f130086d7f96'
   },
+  {
+    'name': "Overwatch",
+    'img_url':
+        'https://overwatch2-static.playoverwatch.com/68a9b3f11e33114ffbb29df0a331d5aa61f4b4c9/static/images/share.jpg',
+    'logo_url': 'https://webstockreview.net/images/overwatch-logo-png-14.png'
+  },
 ];
