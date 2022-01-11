@@ -90,7 +90,7 @@ class _ShopGamesState extends State<ShopGames> {
   SizedBox gameList() {
     Size size = MediaQuery.of(context).size;
     return SizedBox(
-      height: size.height * 0.65,
+      height: size.height * 0.66,
       width: size.width,
       // color: Colors.green,
       child: GridView.builder(
@@ -107,7 +107,7 @@ class _ShopGamesState extends State<ShopGames> {
               width: size.width / 2,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10.0),
-                color: Colors.red,
+                color: Colors.blueAccent,
                 image: DecorationImage(
                   image: NetworkImage(
                     // 'https://cdn2.unrealengine.com/s15-evergreen-winterblue-newsheader-1920x1080-4af4edcd3291.jpg',
