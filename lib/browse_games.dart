@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hexcolor/hexcolor.dart';
 
 import 'constants.dart';
 
@@ -194,18 +195,34 @@ class _BrowseGamesState extends State<BrowseGames> {
                   textAlign: TextAlign.center,
                 ),
                 SizedBox(
+                  height: size.height * 0.02,
+                ),
+                SizedBox(
                   width: size.width * 0.3,
-                  child: ElevatedButton(
-                    onPressed: () {},
-                    child: Text(
-                      'Join',
-                      style: bodyText.copyWith(fontSize: 16.0),
+                  height: size.height * 0.05,
+                  child: DecoratedBox(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20.0),
+                      gradient: LinearGradient(
+                        colors: [lightBgColor, HexColor('#015FBF')],
+                        stops: const [0.6, 0.9],
+                        begin: Alignment.topCenter,
+                        end: Alignment.bottomCenter,
+                      ),
                     ),
-                    style: ElevatedButton.styleFrom(
-                      padding:
-                          EdgeInsets.symmetric(horizontal: size.width * 0.04),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20.0),
+                    child: ElevatedButton(
+                      onPressed: () {},
+                      child: Text(
+                        'Join',
+                        style: bodyText.copyWith(fontSize: 16.0),
+                      ),
+                      style: ElevatedButton.styleFrom(
+                        padding:
+                            EdgeInsets.symmetric(horizontal: size.width * 0.04),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(20.0),
+                        ),
+                        primary: Colors.transparent,
                       ),
                     ),
                   ),
